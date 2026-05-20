@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(powershell -Command \"Get-Item 'index copy.html' | Select-Object Name, Length, LastWriteTime; Get-Item 'index.html' | Select-Object Name, Length, LastWriteTime\")",
+      "Bash(powershell -Command \"Remove-Item 'index copy.html' -Force; if \\(Test-Path 'index copy.html'\\) { 'STILL_EXISTS' } else { 'DELETED' }\")",
+      "PowerShell($paths = @\\('assets/img/icon.png','assets/img/apple-touch-icon.png','assets/img/profile-img.jpg','assets/img/images/web/hospital management system.png','assets/img/images/web/real estate website.png','assets/img/images/web/point of sale.png','assets/img/images/web/cake ordering system.png','assets/img/images/web/crime prediction.png','assets/img/images/web/online entrance exam.png','assets/img/images/app/taxi.png','assets/img/images/app/finlearn.png','assets/img/images/app/fish identification system.png','assets/img/testimonials/testimonials-1.jpg','assets/img/testimonials/testimonials-2.jpg','assets/img/testimonials/testimonials-3.jpg','assets/css/main.css','assets/js/script.js'\\); foreach \\($p in $paths\\) { if \\(Test-Path $p\\) { \"OK: $p\" } else { \"MISSING: $p\" } })",
+      "Bash(powershell -Command \"\\(Get-Content index.html | Measure-Object -Line\\).Lines; Select-String -Path index.html -Pattern 'aos|bootstrap.min|swiper|isotope|glightbox|purecounter|typed\\\\.js|waypoints' -SimpleMatch | Measure-Object | Select-Object Count\")"
+    ]
+  }
+}
