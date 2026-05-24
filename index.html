@@ -404,7 +404,7 @@
             <span class="faq-icon" aria-hidden="true"></span>
           </summary>
           <div class="faq-body">
-            <strong>50% deposit</strong> to start, 50% on launch. Projects longer than 8 weeks are split into 3&ndash;4 milestone payments. I accept GCash, PayPal, Wise, and direct bank transfer (PH or international).
+            <strong>50% deposit</strong> to start, 50% on launch. Projects longer than 8 weeks are split into 3&ndash;4 milestone payments. Payment is via <strong>GCash</strong>.
           </div>
         </details>
 
@@ -518,6 +518,46 @@
       </div>
     </div>
   </footer>
+
+  <!-- ============ Chat widget (lead concierge) ============ -->
+  <div class="chat" id="chat">
+    <!-- greeting nudge -->
+    <div class="chat-nudge" id="chatNudge">
+      👋 Got a project in mind? Let's scope it out.
+      <button class="chat-nudge-close" id="chatNudgeClose" aria-label="Dismiss">×</button>
+    </div>
+
+    <!-- conversation panel -->
+    <div class="chat-panel" role="dialog" aria-label="Chat with Ephraim" aria-modal="false">
+      <div class="chat-head">
+        <div class="avatar">
+          <img src="assets/img/chatbot.avif" alt="Ephraim's assistant">
+          <span class="status" aria-hidden="true"></span>
+        </div>
+        <div class="who">
+          <strong>Ephraim</strong>
+          <span>Freelance dev · usually replies in ~1 hr</span>
+        </div>
+        <button class="chat-min" id="chatMin" aria-label="Minimize chat"><i class="bi bi-chevron-down"></i></button>
+      </div>
+
+      <div class="chat-body" id="chatBody" aria-live="polite"></div>
+
+      <div class="chat-replies" id="chatReplies"></div>
+
+      <form class="chat-foot" id="chatForm">
+        <input type="text" id="chatInput" placeholder="Type your message…" autocomplete="off" aria-label="Type your message">
+        <button type="submit" class="chat-send" aria-label="Send"><i class="bi bi-arrow-up"></i></button>
+      </form>
+    </div>
+
+    <!-- floating launcher -->
+    <button class="chat-launcher" id="chatLauncher" aria-label="Open chat" aria-expanded="false">
+      <span class="chat-badge" aria-hidden="true">1</span>
+      <i class="bi bi-chat-dots-fill icon-open"></i>
+      <i class="bi bi-x-lg icon-close"></i>
+    </button>
+  </div>
 
   <!-- Lightbox -->
   <div class="lightbox" aria-hidden="true">
